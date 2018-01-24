@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Menu</title>
+</head>
+<body>
+<h2>Menu</h2>
+{% if menu_list %}
+    <ul>
+    {% for menu in menu_list %}
+        <li>{{ menu.item_name }}<span style="display:inline-block; width: 20px;"></span>{{ menu.price }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No menu items are available.</p>
+{% endif %}
+</body>
+</html>
